@@ -1,0 +1,4 @@
+bottle
+pymysql
+https://pypi.python.org/packages/0d/3f/3a16847fe5c010110a8f54dd8fe7b091b4e22922def374fe1cce9c1cb7e9/simplejson-3.13.2.tar.gz
+urllib3
