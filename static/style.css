@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+/*
+  ========================================
+  Body
+  ========================================
+*/
+header{
+  width: 50%;
+  float: left;
+}
+nav{
+  width: 50%;
+  float: left;
+  margin-top: 15px;
+  height: 100px;
+  background-color: #494b4f;
+}
+.headlogo {
+  background-color: #494b4f;
+  margin: 0 auto;
+}
+.haus{
+  background-color: #494b4f;
+  width:1200px;
+  height: 115px;
+  margin: auto;
+}
+.haus-container{
+  background-color: #494b4f;
+  width: 100%;
+  height: 115px;
+  position: fixed;
+}
+
+
+/* Bounce To Bottom */
+.navigation a {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.navigation a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #5EFF0D;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.navigation a:hover, .navigation a:focus, .navigation a:active {
+  color: white;
+}
+.navigation a:hover:before, .navigation a:focus:before, .navigation a:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  text-align:column;
+}
+/*
+  ========================================
+  Parallax
+  ========================================
+*/
+.parallax {
+    /* The image used */
+    background-image: url("fashion2.jpg");
+    background-size: 100% auto;
+
+    /* Set a specific height */
+    min-height: 955px;
+
+    /* Set a specific width*/
+    min-width: auto;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    /* The image used */
+    background-image: url("fashion4.jpg");
+    background-size: 100% auto;
+
+    /* Set a specific height */
+    min-height: 550px;
+
+    /* Set a specific width*/
+    min-width: auto;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax3 {
+    /* The image used */
+    background-image: url("fashion3.jpg");
+    background-size: 100% auto;
+
+    /* Set a specific height */
+    min-height: 550px;
+
+    /* Set a specific width*/
+    min-width: auto;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax4 {
+    /* The image used */
+    background-image: url("fashion1.jpg");
+    background-size: 100% auto;
+
+    /* Set a specific height */
+    min-height: 600px;
+
+    /* Set a specific width*/
+    min-width: auto;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*
+  ========================================
+  Navigation
+  ========================================
+*/
+@import "compass/css3";
+
+.navigation {
+  display: flex;
+  flex-flow: column;
+  list-style: none;
+  margin: 0;
+  background: #494b4f;
+  position: fixed;
+  bottom: -18em;
+  left: 0;
+  z-index: 990;
+  transition: all .5s ease;
+
+}
+
+.navigation a {
+  text-decoration: none;
+  height: 100%;
+  display: block;
+  padding: 1em;
+  color: #5EFF0D;
+  text-align: center;
+  border-top: #5EFF0D solid 3px;
+}
+
+.navigation a:hover {
+  color: white;
+}
+.navcontent input {
+  display: none;
+}
+label {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  border: 1px solid #cecfd5;
+    background: #5EFF0D;
+    color: white;
+    width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px 9px;
+
+}
+label:hover {
+  color: #ff7b29;
+}
+input:checked + label {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+  color: #9799a7;
+}
+
+input:checked ~ .navigation {
+  position: fixed;
+  bottom: 2.5em;
+  left: 0;
+  transition: all .5s ease;
+}
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+/*
+  ========================================
+  Flipi
+  ========================================
+*/
+.flipi {
+     width: 100%;
+    background-color:white;
+    font-size:1.1em;
+}
+.inner-flipi{
+    width:1000px;
+    margin:auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+/*
+  ========================================
+  Import Media
+  ========================================
+*/
+@media screen and (min-width: 48em) {
+.navcontent {
+  background: #494b4f;
+}
+.navigation {
+    display: flex;
+  position: relative;
+  top:0;
+  flex-flow: row;
+
+  justify-content: center;
+  }
+  label {
+    display: none;
+  }
+  section{
+    display: flex;
+    flex-flow: row;
+  }
+  section a{
+    font-family:'Montserrat', sans-serif;
+    font-size: 1.5em;
+  }
+  .main{
+    order: 2;
+    flex: 2 2 1em;
+  }
+  .aside-1{
+    order: 1;
+    flex: 1 1 0;
+  }
+  .aside-2{
+    order: 3;
+    flex: 1 1 0;
+  }
+  .myndabox {
+  display: flex;
+  flex-flow: row nowrap;
+    }
+
+}
+@media screen and (min-width: 64em) {
+    body {
+    max-width: auto;
+    margin: 0 auto;
+
+  }
+  .box-set{
+    display: block;
+     position: fixed;
+    top: 4em;
+    left: 0;
+    width: 2em;
+    height: 8em;
+  }
+}
+
+.navcontent input {
+  display: none;
+}
+
+img, video {
+  margin: auto;
+  height: auto;
+}
+
+img {
+  display: block;
+}
+
+figure {
+  margin: 0;
+  border: 1px solid orange;
+}
+.logo {
+  width: 45%;
+  text-align: left;
+}
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+/*
+  ========================================
+  Fonts
+  ========================================
+*/
+h1, h2 {
+  font-family: 'Palanquin Dark', sans-serif;
+}
+
+p {
+  font-family: 'Bitter', serif;
+}
+.txt{
+  width: 50%;
+  }
+/*
+  ========================================
+  header
+  ========================================
+*/
+header{
+  width: 50%;
+  float: left;
+}
+
+nav{
+  width: 50%;
+  float: left;
+  margin-top: 15px;
+  height: 100px;
+  background-color: #494b4f;
+}
+.headlogo {
+  background-color: #494b4f;
+  margin: 0 auto;
+}
+.haus{
+  background-color: #494b4f;
+  width:1200px;
+  height: 115px;
+  margin: auto;
+}
+.haus-container{
+  background-color: #494b4f;
+  width: 100%;
+  height: 115px;
+  top: 0;
+}
+
+
+/* Bounce To Bottom */
+.navigation a {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.navigation a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #5EFF0D;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.navigation a:hover, .navigation a:focus, .navigation a:active {
+  color: white;
+}
+.navigation a:hover:before, .navigation a:focus:before, .navigation a:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+header h1{
+  color: white;
+  font-size: 2.2em;
+}
+body{
+  padding-top: 115px;
+  background-color: #f7f5f3;
+}
+a.darken {
+    background: black;
+    padding: 0;
+}
+
+a.darken img {
+    
+    -webkit-transition: all 0.3s linear;
+       -moz-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+         -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+}
+
+a.darken:hover img {
+    opacity: 0.6;           
+}
+input,select{
+  font-size:1.5em;
+  outline: none;
+  margin: auto;
+  margin-top: 40px;
+  padding: 12px;
+  border:0px white solid;
+  display: block;
+}
+form{
+  margin-top: 100px;
+}
+input[type=submit]{
+  width: 200px;
+}
+input[type=submit]:hover{
+  background-color: grey;
+  cursor: pointer;
+}
+.about{
+  max-width: 800px;
+  margin: auto;
+}
